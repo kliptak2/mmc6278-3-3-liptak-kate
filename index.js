@@ -6,7 +6,9 @@ var questionsArr = [
     }
 ]
 
-function runQuiz {}
+function runQuiz () {
+  
+}
 
 /* To Do
 1 - "before each" hook for "Should have start quiz button"
