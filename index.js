@@ -1,5 +1,5 @@
 // Your code here
-function runQuiz () {
+function runQuiz() {
   var questionsArr = [
     {
       question: "A manatee is also known as a sea cow",
@@ -10,7 +10,7 @@ function runQuiz () {
       answer: true
     },
     {
-      question: "A flamingo is pink because it eats shrimp",
+      question: "A flamingo is pink because of its diet of shrimp",
       answer: true
     },
     {
@@ -20,28 +20,29 @@ function runQuiz () {
     {
       question: "A koala eats mainly bamboo",
       answer: false
-    },
-];
-
-var numOfAgrees = 0
+    }
+  ];
+  var numOfAgrees = 0              // Setting the variable to 0 resets the numOfAgrees to 0 whenever function is run
   for (var i = 0; i < questionsArr.length; i++) {
-    var question = questions[i]
+    var question = questionsArr[i]
     var answer = confirm(question)
-    if (answer) {                   // This is shorthand for if (answer === true)
-      numOfAgrees++
-    } 
+    if (answer) {                 // This is shorthand for if (answer === true)
+      numOfAgrees++               // Increment the # of agrees
+    }
   }
-  if (numOfAgrees >= Math.floor(questions.length / 2)) {
+
+}
+
+// Calculate score
+function scoreTest() {
+  var score = Math.floor(answer/question) * 100;
+  alert("You scored a " + score)
+}
+
+/* From lecture:
+  if (numOfAgrees >= Math.round(questions.length / 2)) {
     alert("You're an animal wiz!")
   } else {
     alert("Hm, you should watch more National Geographic.")
   }
-}
-
-/* To Do
-1 - "before each" hook for "Should have start quiz button"
-2 - Define runQuiz
-3 - Use math.floor to round up score
-4 - Use "for" statment to loop over the array
-5 - if (numOfAgrees >= 3) {
 */
